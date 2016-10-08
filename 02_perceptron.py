@@ -47,3 +47,18 @@ print(NAND(0, 0)) # 1 を出力
 print(NAND(1, 0)) # 1 を出力
 print(NAND(0, 1)) # 1 を出力
 print(NAND(1, 1)) # 0 を出力
+
+def XOR(x1, x2):
+    s1 = OR(x1,x2)
+    s2 = NAND(x1,x2)
+    y = AND(s1,s2)
+    if y <= 0:
+        return 0
+    else:
+        return 1    
+
+print("---XOR---")
+print(XOR(0, 0)) # 0 を出力
+print(XOR(1, 0)) # 1 を出力
+print(XOR(0, 1)) # 1 を出力
+print(XOR(1, 1)) # 0 を出力
